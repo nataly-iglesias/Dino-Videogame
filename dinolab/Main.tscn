@@ -1,0 +1,482 @@
+[gd_scene load_steps=47 format=3 uid="uid://bfm7nfm5ilbcs"]
+
+[ext_resource type="Texture2D" uid="uid://bp3jxeslm2wu4" path="res://1.jpg" id="1_cxhya"]
+[ext_resource type="Script" path="res://WebSocketClient.gd" id="1_op86e"]
+[ext_resource type="Texture2D" uid="uid://c6w5ybfy5bjkv" path="res://laberinto_2.png" id="2_v1p8p"]
+[ext_resource type="Texture2D" uid="uid://07rbv3vpyhwl" path="res://Arbusto.png" id="4_vk2w7"]
+[ext_resource type="Texture2D" uid="uid://7ixc2e5qevgi" path="res://dinoOGAStrip.png" id="5_8rj3s"]
+[ext_resource type="Texture2D" uid="uid://wjmgoy5u4f0x" path="res://Roca.png" id="5_fi1sl"]
+[ext_resource type="Texture2D" uid="uid://do0y4d7r2g4ht" path="res://dinoOGAStrip2.png" id="6_djmqc"]
+[ext_resource type="AudioStream" uid="uid://c15qdw5wa68mt" path="res://sound_victory.mp3" id="7_fqjh1"]
+[ext_resource type="Script" path="res://dinosaurio.gd" id="7_n2wcv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4iwx"]
+size = Vector2(3.5, 34.275)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i707e"]
+size = Vector2(18.5, 2.35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mos0c"]
+size = Vector2(149.2, 2.1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8lw1"]
+size = Vector2(3.69998, 21.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmw6i"]
+size = Vector2(3.7, 45.1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xu6ko"]
+size = Vector2(41.1, 2.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg6dm"]
+size = Vector2(3.80001, 8.6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l814w"]
+size = Vector2(59.6, 2.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22k03"]
+size = Vector2(3.70001, 10.7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ooca"]
+size = Vector2(4, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gatwc"]
+size = Vector2(15, 2.3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ootep"]
+size = Vector2(22, 2.3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdfcy"]
+size = Vector2(78.5, 2.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmc5b"]
+size = Vector2(37.8, 2.6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnsmk"]
+size = Vector2(3.5, 45.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pw2nf"]
+size = Vector2(22.4, 2.3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2buo"]
+size = Vector2(19.1, 2.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qvyf"]
+size = Vector2(3.89999, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n2hv"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr70q"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ax0c"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cyx6"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ada34"]
+atlas = ExtResource("6_djmqc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6fl2"]
+atlas = ExtResource("6_djmqc")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lofa4"]
+atlas = ExtResource("6_djmqc")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5qj7"]
+atlas = ExtResource("6_djmqc")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_disdp"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbo2y"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3r1l"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt5kk"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmv7v"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe8gm"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2h2j"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0m8bf"]
+atlas = ExtResource("5_8rj3s")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a0au4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n2hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr70q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ax0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cyx6")
+}],
+"loop": true,
+"name": &"down",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ada34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6fl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lofa4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5qj7")
+}],
+"loop": true,
+"name": &"left",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_disdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbo2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3r1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt5kk")
+}],
+"loop": true,
+"name": &"rigth",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmv7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe8gm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2h2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0m8bf")
+}],
+"loop": true,
+"name": &"up",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2u8k0"]
+size = Vector2(11.6, 14.8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_km60e"]
+size = Vector2(108, 78)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_op86e")
+
+[node name="Fondo" type="StaticBody2D" parent="."]
+
+[node name="Pasto" type="Sprite2D" parent="Fondo"]
+modulate = Color(0.472586, 0.81927, 0.328507, 1)
+self_modulate = Color(0.804743, 0.804743, 0.804743, 1)
+position = Vector2(908, 503.5)
+scale = Vector2(5.50495, 5.50446)
+texture = ExtResource("1_cxhya")
+
+[node name="Laberinto" type="StaticBody2D" parent="Fondo/Pasto"]
+position = Vector2(-169.665, -91.4712)
+scale = Vector2(1.81655, 1.81671)
+
+[node name="Lab" type="Sprite2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(101.6, 50.8)
+scale = Vector2(0.325149, 0.344404)
+texture = ExtResource("2_v1p8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(26.85, 23.1375)
+shape = SubResource("RectangleShape2D_x4iwx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(37.95, 39.425)
+shape = SubResource("RectangleShape2D_i707e")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(103.4, 7.05)
+shape = SubResource("RectangleShape2D_mos0c")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(45.35, 51.35)
+shape = SubResource("RectangleShape2D_i8lw1")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(26.75, 71.75)
+shape = SubResource("RectangleShape2D_pmw6i")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(64.05, 17.9)
+shape = SubResource("RectangleShape2D_xu6ko")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(82.8, 12.3)
+shape = SubResource("RectangleShape2D_mg6dm")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(73.4, 28.7)
+shape = SubResource("RectangleShape2D_l814w")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(101.45, 22.05)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(64.1, 39.4)
+shape = SubResource("RectangleShape2D_3ooca")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(82.6, 50.2)
+shape = SubResource("RectangleShape2D_xu6ko")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(82.7, 56.7)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(45.6, 71.9)
+shape = SubResource("RectangleShape2D_xu6ko")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(64.1, 65.2)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(73.5, 60.85)
+shape = SubResource("RectangleShape2D_gatwc")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(103.3, 93.3)
+shape = SubResource("RectangleShape2D_mos0c")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(101.4, 65.3)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(92.1, 71.75)
+shape = SubResource("RectangleShape2D_ootep")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(82.8, 76.1)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(82.75, 82.7)
+shape = SubResource("RectangleShape2D_fdfcy")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(120.2, 76.1)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(138.7, 71.8)
+shape = SubResource("RectangleShape2D_xu6ko")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(157.6, 65.3)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(147.9, 60.9)
+shape = SubResource("RectangleShape2D_ootep")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(138.7, 54.5)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(129.2, 50.2)
+shape = SubResource("RectangleShape2D_gatwc")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(138.7, 13.8)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(99.8, 39.3)
+shape = SubResource("RectangleShape2D_cmc5b")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(120.15, 39.4)
+shape = SubResource("RectangleShape2D_qnsmk")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(129.4, 17.9)
+shape = SubResource("RectangleShape2D_gatwc")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(157.4, 82.7)
+shape = SubResource("RectangleShape2D_xu6ko")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(157.5, 45.9)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(148.1, 39.35)
+shape = SubResource("RectangleShape2D_pw2nf")
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(138.7, 32.8)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(149.85, 28.7)
+shape = SubResource("RectangleShape2D_f2buo")
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(157.5, 22.1)
+shape = SubResource("RectangleShape2D_22k03")
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(168.2, 18)
+shape = SubResource("RectangleShape2D_f2buo")
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Fondo/Pasto/Laberinto"]
+position = Vector2(176.05, 56.5)
+shape = SubResource("RectangleShape2D_0qvyf")
+
+[node name="Arbusto" type="Sprite2D" parent="Fondo"]
+position = Vector2(120, 127)
+scale = Vector2(0.75, 0.7)
+texture = ExtResource("4_vk2w7")
+
+[node name="Arbusto" type="Sprite2D" parent="Fondo/Arbusto"]
+position = Vector2(-82.6667, 37.1429)
+scale = Vector2(0.788691, 0.753571)
+texture = ExtResource("4_vk2w7")
+
+[node name="Arbusto2" type="Sprite2D" parent="Fondo/Arbusto"]
+position = Vector2(24.3333, 988.929)
+scale = Vector2(0.982143, 0.964287)
+texture = ExtResource("4_vk2w7")
+
+[node name="Arbusto3" type="Sprite2D" parent="Fondo/Arbusto"]
+position = Vector2(2273.33, 217.143)
+scale = Vector2(1.06547, 1.05)
+texture = ExtResource("4_vk2w7")
+
+[node name="Arbusto4" type="Sprite2D" parent="Fondo/Arbusto"]
+position = Vector2(2242.67, 907.143)
+scale = Vector2(0.803569, 0.807143)
+texture = ExtResource("4_vk2w7")
+
+[node name="Arbusto5" type="Sprite2D" parent="Fondo/Arbusto"]
+position = Vector2(2290.67, 948.571)
+scale = Vector2(1.06547, 1.05)
+texture = ExtResource("4_vk2w7")
+
+[node name="Roca" type="Sprite2D" parent="Fondo"]
+position = Vector2(143, 241.5)
+scale = Vector2(1.4375, 1.8125)
+texture = ExtResource("5_fi1sl")
+
+[node name="Roca" type="Sprite2D" parent="Fondo/Roca"]
+position = Vector2(-69.2283, 178.306)
+scale = Vector2(0.848505, 0.918641)
+texture = ExtResource("5_fi1sl")
+
+[node name="Roca2" type="Sprite2D" parent="Fondo/Roca"]
+position = Vector2(29.913, 282.207)
+scale = Vector2(0.848505, 0.918641)
+texture = ExtResource("5_fi1sl")
+
+[node name="Roca3" type="Sprite2D" parent="Fondo/Roca"]
+position = Vector2(1203.48, 237.517)
+scale = Vector2(0.848505, 0.918641)
+texture = ExtResource("5_fi1sl")
+
+[node name="Roca4" type="Sprite2D" parent="Fondo/Roca"]
+position = Vector2(1205.57, 50.4828)
+scale = Vector2(0.848505, 0.918641)
+texture = ExtResource("5_fi1sl")
+
+[node name="Roca5" type="Sprite2D" parent="Fondo/Roca"]
+position = Vector2(1220.17, 38.8966)
+scale = Vector2(0.848505, 0.918641)
+texture = ExtResource("5_fi1sl")
+
+[node name="Dinosaurio" type="CharacterBody2D" parent="."]
+position = Vector2(184, 451)
+scale = Vector2(2.5, 2.5)
+script = ExtResource("7_n2wcv")
+
+[node name="Dino" type="AnimatedSprite2D" parent="Dinosaurio"]
+sprite_frames = SubResource("SpriteFrames_a0au4")
+animation = &"rigth"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinosaurio"]
+position = Vector2(0.600006, -1)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2u8k0")
+
+[node name="VictoriaLabel" type="Label" parent="."]
+visible = false
+offset_left = 799.0
+offset_top = 441.0
+offset_right = 1132.0
+offset_bottom = 556.0
+theme_override_font_sizes/font_size = 84
+
+[node name="ComandoLabel" type="Label" parent="."]
+offset_left = 783.0
+offset_top = 18.0
+offset_right = 1192.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 21
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Meta" type="Area2D" parent="."]
+position = Vector2(1746, 127)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Meta"]
+position = Vector2(47, -3)
+shape = SubResource("RectangleShape2D_km60e")
+
+[node name="Sonido_Victoria" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_fqjh1")
+
+[connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
